@@ -1,0 +1,27 @@
+general:
+  default_language: php
+  max_snippet_lines: 120
+  use_ai_by_default: true
+
+ai:
+  enabled: true
+  model: gpt-4.1-mini          # cámbialo por el modelo que quieras
+  base_url: https://api.openai.com/v1/chat/completions
+  temperature: 0.0
+
+static_analysis:
+  enable_generic_patterns: true
+  enable_php_rules: true
+
+paths:
+  include_extensions:
+    - .php
+  exclude_dirs:
+    - .git
+    - venv
+    - env
+    - __pycache__
+    - node_modules
+
+severity_thresholds:
+  ai_min_confidence: 0.5
